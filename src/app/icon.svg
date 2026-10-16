@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <defs>
+    <!-- Vaporwave/Cyberpunk neon gradient matching the 3D Dance Cat aesthetic -->
+    <linearGradient id="neon-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF007A" />
+      <stop offset="60%" stop-color="#7928CA" />
+      <stop offset="100%" stop-color="#00F0FF" />
+    </linearGradient>
+    
+    <!-- Neon audio pulse glow with expanded bounds to eliminate clipping -->
+    <filter id="groove-blur" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="3" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Deep dark background for high-contrast icon pop -->
+  <rect width="100" height="100" rx="24" fill="#0A0B10" />
+
+  <!-- Centered 'D' audio-reactive music visualizer EQ -->
+  <g filter="url(#groove-blur)" stroke="url(#neon-glow)" stroke-linecap="round" fill="none">
+    <!-- Main Spine / Audio Bar 1 -->
+    <line x1="27" y1="25" x2="27" y2="75" stroke-width="8" />
+
+    <!-- Curved Beat Wave forming the 'D' loop -->
+    <path d="M27 25 C53 21, 73 32, 73 50 C73 68, 53 79, 27 75" stroke-width="8" />
+
+    <!-- Inner Equalizer Pulse Bars -->
+    <line x1="41" y1="40" x2="41" y2="60" stroke-width="5" opacity="0.85" />
+    <line x1="51" y1="44" x2="51" y2="56" stroke-width="5" opacity="0.7" />
+  </g>
+
+  <!-- Audio-reactive ambient spark with matching glow -->
+  <circle cx="27" cy="25" r="3" fill="#00F0FF" filter="url(#groove-blur)" />
+</svg>
